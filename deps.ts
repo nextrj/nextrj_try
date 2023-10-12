@@ -50,6 +50,17 @@ export {
 } from 'https://deno.land/std@0.203.0/testing/mock.ts'
 export type { ExpectedSpyCall, Spy, SpyCall, Stub } from 'https://deno.land/std@0.203.0/testing/mock.ts'
 
+export { FakeTime, TimeError } from 'https://deno.land/std@0.203.0/testing/time.ts'
+export type { FakeTimeOptions } from 'https://deno.land/std@0.203.0/testing/time.ts'
+
+import { createAssertSnapshot, serialize } from 'https://deno.land/std@0.203.0/testing/snapshot.ts'
+const assertSnapshot = createAssertSnapshot({
+  dir: '.snaps',
+})
+export { assertSnapshot, createAssertSnapshot, serialize }
+
+export { stripAnsiCode } from 'https://deno.land/std@0.203.0/fmt/colors.ts'
+
 // deno/x
 
 // npm
